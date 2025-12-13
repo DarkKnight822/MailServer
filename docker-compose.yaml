@@ -1,0 +1,71 @@
+services:
+  haproxy:
+    image: haproxy:2.9
+    container_name: haproxy
+    ports:
+      - "25:25"
+      - "143:143"
+      - "587:587"
+      - "8080:80"
+      - "8404:8404"
+    volumes:
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    depends_on:
+      - mailserver
+      - rainloop
+    restart: unless-stopped
+    networks:
+      - mailnet
+
+  mailserver:
+    image: docker.io/mailserver/docker-mailserver:latest
+    hostname: mail
+    domainname: example.local
+    env_file: ./mailserver/mailserver.env
+    volumes:
+      - maildata_shared:/var/mail
+      - /var/mail-state
+      - /var/log/mail
+      - ./mailserver/config:/tmp/docker-mailserver
+    cap_add:
+      - NET_ADMIN
+      - SYS_PTRACE
+    restart: unless-stopped
+    networks:
+      - mailnet
+    deploy:
+      replicas: 2
+
+  rainloop:
+    image: hardware/rainloop:latest
+    # container_name УБРАЛИ, иначе реплики не поднимутся
+    volumes:
+      - ./rainloop/data:/rainloop/data
+    restart: unless-stopped
+    networks:
+      - mailnet
+    deploy:
+      replicas: 2
+
+  rainloop-db:
+    image: mariadb:11
+    container_name: rainloop-db
+    environment:
+      - MARIADB_DATABASE=rainloop
+      - MARIADB_USER=rainloop
+      - MARIADB_PASSWORD=rainlooppass
+      - MARIADB_ROOT_PASSWORD=rootpass
+    volumes:
+      - rainloop_db:/var/lib/mysql
+    restart: unless-stopped
+    networks:
+      - mailnet
+
+networks:
+  mailnet:
+    driver: bridge
+
+volumes:
+  maildata_shared:
+    external: true
+  rainloop_db:

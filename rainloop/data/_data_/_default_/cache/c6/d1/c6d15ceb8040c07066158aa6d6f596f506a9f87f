@@ -1,0 +1,170 @@
+window.rainloopI18N={"LANGS_NAMES/LANG_EN":"English","LANGS_NAMES/LANG_EN_US":"English","LANGS_NAMES/LANG_EN_GB":"English (UK)","LANGS_NAMES/LANG_EN_UK":"English (UK)","LANGS_NAMES/LANG_EN_CA":"English (Canadian)","LANGS_NAMES/LANG_TH_TH":"ภาษาไทย","LANGS_NAMES/LANG_EL_GR":"Ελληνικά","LANGS_NAMES/LANG_NL_NL":"Nederlands","LANGS_NAMES/LANG_NB_NO":"Norsk (bokmål)","LANGS_NAMES/LANG_PL_PL":"Polski","LANGS_NAMES/LANG_RU_RU":"Русский","LANGS_NAMES/LANG_RO_RO":"Română","LANGS_NAMES/LANG_UK_UA":"Українська","LANGS_NAMES/LANG_DE_DE":"Deutsch","LANGS_NAMES/LANG_FI_FI":"Suomi","LANGS_NAMES/LANG_FR_FR":"Français (France)","LANGS_NAMES/LANG_FR_CA":"Français (Canada)","LANGS_NAMES/LANG_PT_PT":"Português (Portugal)","LANGS_NAMES/LANG_PT_BR":"Português (Brasil)","LANGS_NAMES/LANG_ES_ES":"Español (España)","LANGS_NAMES/LANG_ES_LA":"Español","LANGS_NAMES/LANG_ET_EE":"Eesti","LANGS_NAMES/LANG_FA_IR":"‏فارسی‏","LANGS_NAMES/LANG_IT_IT":"Italiano","LANGS_NAMES/LANG_LT_LT":"Lietuvių","LANGS_NAMES/LANG_LV_LV":"Latviešu","LANGS_NAMES/LANG_IS_IS":"Íslenska","LANGS_NAMES/LANG_HU_HU":"Magyar","LANGS_NAMES/LANG_TR_TR":"Türkçe","LANGS_NAMES/LANG_SK_SK":"Slovenčina","LANGS_NAMES/LANG_SV_SE":"Svenska","LANGS_NAMES/LANG_SL_SI":"Slovenščina","LANGS_NAMES/LANG_JA_JP":"日本語","LANGS_NAMES/LANG_ZH_TW":"中文(台灣)","LANGS_NAMES/LANG_ZH_CN":"中文(简体)","LANGS_NAMES/LANG_ZH_HK":"中文(香港)","LANGS_NAMES/LANG_KO_KR":"한국어","LANGS_NAMES/LANG_BG_BG":"Български","LANGS_NAMES/LANG_CS_CZ":"Čeština","LANGS_NAMES/LANG_AR_SA":"‏العربية‏","LANGS_NAMES/LANG_DA_DK":"Dansk","LANGS_NAMES/LANG_ID_ID":"Bahasa Indonesia","LANGS_NAMES_EN/LANG_EN":"English","LANGS_NAMES_EN/LANG_EN_US":"English (US)","LANGS_NAMES_EN/LANG_EN_GB":"English (UK)","LANGS_NAMES_EN/LANG_EN_UK":"English (UK)","LANGS_NAMES_EN/LANG_EN_CA":"English (Canadian)","LANGS_NAMES_EN/LANG_TH_TH":"Thai","LANGS_NAMES_EN/LANG_EL_GR":"Greek","LANGS_NAMES_EN/LANG_NL_NL":"Dutch","LANGS_NAMES_EN/LANG_NB_NO":"Norwegian (bokmal)","LANGS_NAMES_EN/LANG_PL_PL":"Polish","LANGS_NAMES_EN/LANG_RU_RU":"Russian","LANGS_NAMES_EN/LANG_RO_RO":"Romanian","LANGS_NAMES_EN/LANG_UK_UA":"Ukrainian","LANGS_NAMES_EN/LANG_DE_DE":"German","LANGS_NAMES_EN/LANG_FI_FI":"Finnish","LANGS_NAMES_EN/LANG_FR_FR":"French (France)","LANGS_NAMES_EN/LANG_FR_CA":"France (Canada)","LANGS_NAMES_EN/LANG_PT_PT":"Portuguese (Portugal)","LANGS_NAMES_EN/LANG_PT_BR":"Portuguese (Brazil)","LANGS_NAMES_EN/LANG_ES_ES":"Spanish","LANGS_NAMES_EN/LANG_ES_LA":"Spanish","LANGS_NAMES_EN/LANG_ET_EE":"Estonian","LANGS_NAMES_EN/LANG_FA_IR":"Persian","LANGS_NAMES_EN/LANG_IT_IT":"Italian","LANGS_NAMES_EN/LANG_LT_LT":"Lithuanian","LANGS_NAMES_EN/LANG_LV_LV":"Latvian","LANGS_NAMES_EN/LANG_IS_IS":"Icelandic","LANGS_NAMES_EN/LANG_HU_HU":"Hungarian","LANGS_NAMES_EN/LANG_TR_TR":"Turkish","LANGS_NAMES_EN/LANG_SK_SK":"Slovak","LANGS_NAMES_EN/LANG_SL_SI":"Slovenian","LANGS_NAMES_EN/LANG_SV_SE":"Swedish","LANGS_NAMES_EN/LANG_JA_JP":"Japanese","LANGS_NAMES_EN/LANG_ZH_TW":"Traditional Chinese (Taiwan)","LANGS_NAMES_EN/LANG_ZH_CN":"Simplified Chinese (China)","LANGS_NAMES_EN/LANG_ZH_HK":"Traditional Chinese (Hong Kong)","LANGS_NAMES_EN/LANG_KO_KR":"Korean","LANGS_NAMES_EN/LANG_BG_BG":"Bulgarian","LANGS_NAMES_EN/LANG_CS_CZ":"Czech","LANGS_NAMES_EN/LANG_AR_SA":"Arabic","LANGS_NAMES_EN/LANG_DA_DK":"Danish","LANGS_NAMES_EN/LANG_ID_ID":"Indonesian","LOGIN/LABEL_LOGIN":"Логин","LOGIN/LABEL_PASSWORD":"Пароль","LOGIN/BUTTON_LOGIN":"Войти в админ панель","TOP_PANEL/LABEL_PREMIUM":"Премиум","TOP_PANEL/LABEL_ADMIN_PANEL":"Админка","TABS_LABELS/LABEL_GENERAL_NAME":"Основные","TABS_LABELS/LABEL_LOGIN_NAME":"Логин","TABS_LABELS/LABEL_BRANDING_NAME":"Брендинг","TABS_LABELS/LABEL_CONTACTS_NAME":"Контакты","TABS_LABELS/LABEL_DOMAINS_NAME":"Домены","TABS_LABELS/LABEL_SECURITY_NAME":"Безопасность","TABS_LABELS/LABEL_INTEGRATION_NAME":"Интеграция","TABS_LABELS/LABEL_PLUGINS_NAME":"Плагины","TABS_LABELS/LABEL_PACKAGES_NAME":"Пакеты","TABS_LABELS/LABEL_LICENSING_NAME":"Лицензия","TABS_LABELS/LABEL_ABOUT_NAME":"О Программе","TAB_GENERAL/LEGEND_INTERFACE":"Интерфейс","TAB_GENERAL/LABEL_LANGUAGE":"Язык","TAB_GENERAL/LABEL_LANGUAGE_ADMIN":"Язык (Админ)","TAB_GENERAL/LABEL_THEME":"Тема","TAB_GENERAL/LABEL_ALLOW_LANGUAGES_ON_SETTINGS":"Разрешить выбор языка на экране настроек","TAB_GENERAL/LABEL_ALLOW_THEMES_ON_SETTINGS":"Разрешить выбор темы на экране настроек","TAB_GENERAL/LABEL_ALLOW_BACKGROUND_ON_SETTINGS":"Allow background selection on settings screen","TAB_GENERAL/LABEL_NEW_FOLDER_MOVE":"Новая кнопка \"переместить в папку\"","TAB_GENERAL/LABEL_SHOW_THUMBNAILS":"Показывать миниатюры (для вложений)","TAB_GENERAL/LABEL_ALLOW_GRAVATAR":"Разрешить граватары","TAB_GENERAL/LEGEND_MAIN":"Основное","TAB_GENERAL/LABEL_ATTACHMENT_SIZE_LIMIT":"Предельный размер вложений","TAB_GENERAL/LABEL_ALLOW_ADDITIONAL_ACCOUNTS":"Разрешить дополнительные аккаунты","TAB_GENERAL/LABEL_ALLOW_IDENTITIES":"Разрешить множественные профили","TAB_GENERAL/LABEL_ALLOW_TEMPLATES":"Разрешить шаблоны","TAB_GENERAL/ALERT_DATA_ACCESS":"Папка данных RainLoop доступна. Пожалуйста, настройте свой веб-сервер так, чтобы скрыть папку данных с внешнего доступа. Подробнее здесь:","TAB_GENERAL/ALERT_WARNING":"Внимание!","TAB_GENERAL/HTML_ALERT_WEAK_PASSWORD":"Вы используете пароль администратора по умолчанию.\n<br />\nПо соображениям безопасности, пожалуйста,\n<strong><a href=\"#/security\">измените пароль</a></strong> прямо сейчас.","TAB_LOGIN/LEGEND_LOGIN_SCREEN":"Cтраница Входа","TAB_LOGIN/LABEL_DEFAULT_DOMAIN":"Основной домен","TAB_LOGIN/LABEL_DETERMINE_USER_DOMAIN":"Пытаться определить домен пользователя","TAB_LOGIN/LABEL_ALLOW_LANGUAGES_ON_LOGIN":"Разрешить выбор языка на странице входа","TAB_LOGIN/LABEL_DETERMINE_USER_LANGUAGE":"Пытаться определить язык пользователя","TAB_BRANDING/LEGEND_BRANDING":"Брендинг","TAB_BRANDING/LABEL_PAGE_TITLE":"Название страницы","TAB_BRANDING/LABEL_LOADING_DESCRIPTION":"Описание при загрузке","TAB_BRANDING/LABEL_FAVICON_URL":"Иконка (favicon)","TAB_BRANDING/LEGEND_LOGIN":"Экран входа","TAB_BRANDING/LABEL_LOGIN_LOGO":"Логотип","TAB_BRANDING/LABEL_LOGIN_DESCRIPTION":"Описание","TAB_BRANDING/LABEL_LOGIN_BACKGROUND":"Фоновая картинка","TAB_BRANDING/LABEL_LOGIN_CUSTOM_CSS":"Кастомный CSS","TAB_BRANDING/LABEL_LOGIN_SHOW_POWERED_LINK":"Показывать ссылку \"Powered by RainLoop\"","TAB_BRANDING/LEGEND_USER":"Экран пользователя","TAB_BRANDING/LABEL_USER_LOGO":"Логотип","TAB_BRANDING/LABEL_USER_LOGO_TITLE":"Название логотипа","TAB_BRANDING/LABEL_USER_LOGO_MESSAGE":"Логотип (Message View)","TAB_BRANDING/LABEL_USER_CUSTOM_CSS":"Кастомный CSS","TAB_BRANDING/LEGEND_WELCOME_PAGE":"Приветствие","TAB_BRANDING/LABEL_WELCOME_PAGE_TITLE":"Название","TAB_BRANDING/LABEL_WELCOME_PAGE_URL":"URL","TAB_BRANDING/LABEL_WELCOME_PAGE_DISPLAY":"Показывать","TAB_BRANDING/OPTION_WELCOME_PAGE_DISPLAY_NONE":"Никогда","TAB_BRANDING/OPTION_WELCOME_PAGE_DISPLAY_ONCE":"Один раз","TAB_BRANDING/OPTION_WELCOME_PAGE_DISPLAY_ALWAYS":"Всегда","TAB_BRANDING/HTML_ALERT_PREMIUM":"Эти функции доступны для <strong><a href=\"#/licensing\">премиум</a></strong> подписчиков.","TAB_CONTACTS/LEGEND_CONTACTS":"Контакты","TAB_CONTACTS/LEGEND_STORAGE":"Хранилище (PDO)","TAB_CONTACTS/LABEL_ENABLE_CONTACTS":"Включить контакты","TAB_CONTACTS/LABEL_ALLOW_SYNC":"Разрешить синхронизацию контактов (с внешним CardDAV сервером)","TAB_CONTACTS/LABEL_STORAGE_TYPE":"Тип","TAB_CONTACTS/LABEL_STORAGE_DSN":"Dsn","TAB_CONTACTS/LABEL_STORAGE_USER":"Пользователь","TAB_CONTACTS/LABEL_STORAGE_PASSWORD":"Пароль","TAB_CONTACTS/BUTTON_TEST":"Тест","TAB_CONTACTS/ALERT_NOTICE":"Внимание!","TAB_CONTACTS/HTML_ALERT_DO_NOT_USE_THIS_DATABASE":"Не используйте этот тип базы данных с большим числом активных пользователей.","TAB_CONTACTS/HTML_ALERT_DOES_NOT_SUPPORTED":"Ваша система не поддерживает контакты.\n<br />\nВам необходимо установить или включить <strong>PDO (SQLite / MySQL / PostgreSQL)</strong> расширения на вашем сервере.","TAB_DOMAINS/LEGEND_DOMAINS":"Домены","TAB_DOMAINS/BUTTON_ADD_DOMAIN":"Добавить домен","TAB_DOMAINS/BUTTON_ADD_ALIAS":"Добавить Алиас","TAB_DOMAINS/DELETE_ARE_YOU_SURE":"Вы уверены?","TAB_DOMAINS/HTML_DOMAINS_HELPER":"Список доменов к которым разрешен доступ.\n<br />\nНажмите на имя, чтобы настроить домен.","TAB_SECURITY/LEGEND_SECURITY":"Безопасность","TAB_SECURITY/LABEL_ALLOW_TWO_STEP":"Разрешить 2-шаговую проверку","TAB_SECURITY/LABEL_FORCE_TWO_STEP":"Форсировать 2-шаговую проверку","TAB_SECURITY/LABEL_USE_IMAGE_PROXY":"Использовать локальный прокси для внешних изображений","TAB_SECURITY/LABEL_ALLOW_OPEN_PGP":"Разрешить OpenPGP","TAB_SECURITY/LABEL_SHOW_PHP_INFO":"Показать PHP информацию","TAB_SECURITY/LEGEND_ADMIN_PANEL_ACCESS_CREDENTIALS":"Admin Panel Access Credentials","TAB_SECURITY/LABEL_CURRENT_PASSWORD":"Текущий пароль","TAB_SECURITY/LABEL_NEW_LOGIN":"Новый логин","TAB_SECURITY/LABEL_NEW_PASSWORD":"Новый пароль","TAB_SECURITY/LABEL_REPEAT_PASSWORD":"Повторить пароль","TAB_SECURITY/BUTTON_UPDATE_PASSWORD":"Обновить пароль","TAB_SECURITY/LEGEND_SSL":"SSL","TAB_SECURITY/LABEL_REQUIRE_VERIFICATION":"Требовать проверку SSL сертификата для IMAP и SMTP","TAB_SECURITY/LABEL_ALLOW_SELF_SIGNED":"Разрешить cамоподписанные сертификаты","TAB_INTEGRATIONS/LEGEND_GOOGLE":"Google","TAB_INTEGRATIONS/LABEL_ENABLE_GOOGLE":"Включить Google интеграцию","TAB_INTEGRATIONS/LABEL_GOOGLE_AUTH":"Авторизация","TAB_INTEGRATIONS/LABEL_GOOGLE_DRIVE":"Google диск интеграция (Экран нового сообщения)","TAB_INTEGRATIONS/LABEL_GOOGLE_PREVIEW":"Google просмотрщик интеграция (Превью для Microsoft Word, Excel и PowerPoint файлов)","TAB_INTEGRATIONS/LABEL_GOOGLE_CLIENT_ID":"Client ID","TAB_INTEGRATIONS/LABEL_GOOGLE_CLIENT_SECRET":"Client Secret","TAB_INTEGRATIONS/LABEL_GOOGLE_API_KEY":"Api Key","TAB_INTEGRATIONS/HINT_GOOGLE_API_KEY":"Требуется для Google Drive File Picker","TAB_INTEGRATIONS/LEGEND_FACEBOOK":"Facebook","TAB_INTEGRATIONS/LABEL_ENABLE_FACEBOOK":"Включить Facebook интеграцию (Авторизация)","TAB_INTEGRATIONS/LABEL_FACEBOOK_APP_ID":"App ID","TAB_INTEGRATIONS/LABEL_FACEBOOK_APP_SECRET":"App Secret","TAB_INTEGRATIONS/LEGEND_TWITTER":"Twitter","TAB_INTEGRATIONS/LABEL_ENABLE_TWITTER":"Включить Twitter интеграцию (Авторизация)","TAB_INTEGRATIONS/LABEL_TWITTER_CONSUMER_KEY":"Consumer Key","TAB_INTEGRATIONS/LABEL_TWITTER_CONSUMER_SECRET":"Consumer Secret","TAB_INTEGRATIONS/LEGEND_DROPBOX":"Dropbox","TAB_INTEGRATIONS/LABEL_ENABLE_DROPBOX":"Включить Dropbox интеграцию","TAB_INTEGRATIONS/LABEL_DROPBOX_API_KEY":"Api Key","TAB_INTEGRATIONS/TOP_ALERT":"Подробная информация о социальной интеграции находится на","TAB_PLUGINS/LEGEND_PLUGINS":"Плагины","TAB_PLUGINS/LABEL_ENABLE_PLUGINS":"Включить плагины","TAB_PLUGINS/ALERT_NO_PLUGINS":"Плагины пока не установлены.","TAB_PLUGINS/LINK_INSTALL_NEW":"Нажмите здесь, чтобы установить плагин","TAB_PLUGINS/HINT_CLICK_NAME":"Нажмите на имя, чтобы настроить плагин.","TAB_PACKAGES/LEGEND_AVAILABLE_FOR_UPDATE":"Доступно для обновления","TAB_PACKAGES/LEGEND_AVAILABLE_FOR_INSTALLATION":"Доступно для установки","TAB_PACKAGES/LEGEND_INSTALLED_PACKAGES":"Установленные пакеты","TAB_PACKAGES/ALERT_CANNOT_ACCESS_REPOSITORY":"Не удается получить доступ к хранилищу пакетов в данный момент.","TAB_LICENSING/LABEL_YOUR_DOMAIN":"Ваш домен","TAB_LICENSING/LABEL_VERSION":"Версия","TAB_LICENSING/LABEL_CHECKING":"Проверка","TAB_LICENSING/TYPE_BASIC_HINT":"Этот домен не имеет лицензию для коммерческого использования (с дополнительными функциями).","TAB_LICENSING/TYPE_BASIC_HINT_2":"Этот домен не может быть лицензирован.","TAB_LICENSING/HTML_ALERT_TOP_1":"Код RainLoop Webmail лицензирован под","TAB_LICENSING/HTML_ALERT_TOP_2":"Вы можете <b>свободно</b> использовать его в своих <b>личных</b> проектах.","TAB_LICENSING/HTML_ALERT_TOP_3":"Коммерческое использование (с дополнительными функциями) <b>RainLoop Webmail</b> требует получение\n<a href=http://www.rainloop.net/purchase/ target=_blank>лицензии</a>.","TAB_LICENSING/TYPE_PREMIUM_LIFETIME":"бесконечная","TAB_LICENSING/LABEL_SUB_EXPIRES":"Подписка истекает","TAB_LICENSING/BUTTON_ACTIVATE":"Активировать ключ для этого домена","TAB_LICENSING/BUTTON_PURCHASE":"Купить","TAB_LICENSING/BUTTON_TRIAL":"Пробная лицензия","TAB_ABOUT/LEGEND_ABOUT":"О программе","TAB_ABOUT/LABEL_TAG_HINT":"Простой, современный и быстрый веб-клиент электронной почты\n","TAB_ABOUT/LABEL_ALL_RIGHTS_RESERVED":"Все права защищены.","TAB_ABOUT/HINT_READ_CHANGE_LOG":"Пожалуйста, ознакомьтесь с изменениями перед обновлением.\n","TAB_ABOUT/HINT_IS_UP_TO_DATE":"Версия RainLoop актуальна.","TAB_ABOUT/HTML_NEW_VERSION":"Новая <b>%VERSION%</b> версия доступна.","TAB_ABOUT/LABEL_UPDATING":"Обновление","TAB_ABOUT/LABEL_CHECKING":"Проверка","TAB_ABOUT/BUTTON_UPDATE":"Обновить","TAB_ABOUT/BUTTON_DOWNLOAD":"Скачать","TAB_ABOUT/BUTTON_CHANGELOG":"Изменения","POPUPS_ACTIVATE/TITLE_ACTIVATE":"Активировать ключ подписки?","POPUPS_ACTIVATE/TITLE_ACTIVATION":"Активация...","POPUPS_ACTIVATE/LABEL_DOMAIN":"Домен","POPUPS_ACTIVATE/LABEL_SUB_KEY":"Ключ подписки","POPUPS_ACTIVATE/BUTTON_ACTIVATE":"Активировать","POPUPS_ACTIVATE/LABEL_ACTIVATED":"Активировано","POPUPS_ACTIVATE/ERROR_INVALID_SUBS_KEY":"Неверный ключ подписки","POPUPS_ACTIVATE/SUBS_KEY_ACTIVATED":"Ключ подписки активирован удачно","POPUPS_ACTIVATE/HTML_DESC":"После активации премиум подписка для <b>%DOMAIN%</b> будет продлена.\n<br />\nОбратите внимание, что ключ может быть активирован только один раз.\n<br /><br />\nПосле запуска процесс активации не может быть прерван или отменен.","POPUPS_DOMAIN_ALIAS/TITLE_ADD_DOMAIN_ALIAS":"Добавить Алиас","POPUPS_DOMAIN_ALIAS/LABEL_ALIAS":"Алиас","POPUPS_DOMAIN_ALIAS/LABEL_DOMAIN":"Домен","POPUPS_DOMAIN_ALIAS/BUTTON_CLOSE":"Закрыть","POPUPS_DOMAIN_ALIAS/BUTTON_ADD":"Добавить","POPUPS_DOMAIN/TITLE_ADD_DOMAIN":"Добавить домен","POPUPS_DOMAIN/TITLE_ADD_DOMAIN_WITH_NAME":"Добавить домен \"%NAME%\"","POPUPS_DOMAIN/TITLE_EDIT_DOMAIN":"Редактировать домен \"%NAME%\"","POPUPS_DOMAIN/LABEL_NAME":"Имя","POPUPS_DOMAIN/NAME_HELPER":"wildcard supported","POPUPS_DOMAIN/LABEL_IMAP":"IMAP","POPUPS_DOMAIN/LABEL_SMTP":"SMTP","POPUPS_DOMAIN/LABEL_SIEVE":"SIEVE","POPUPS_DOMAIN/LABEL_SERVER":"Сервер","POPUPS_DOMAIN/LABEL_PORT":"Порт","POPUPS_DOMAIN/LABEL_SECURE":"Безопасность","POPUPS_DOMAIN/LABEL_WHITE_LIST":"Белый список","POPUPS_DOMAIN/SECURE_OPTION_NONE":"Нет","POPUPS_DOMAIN/SECURE_OPTION_SSL":"SSL/TLS","POPUPS_DOMAIN/SECURE_OPTION_STARTTLS":"STARTTLS","POPUPS_DOMAIN/LABEL_ALLOW_SIEVE_SCRIPTS":"Разрешить sieve скрипты","POPUPS_DOMAIN/LABEL_ALLOW_USER_SCRIPT":"Разрешить использовать пользовательский sieve скрипт","POPUPS_DOMAIN/LABEL_USE_SHORT_LOGIN":"Использовать короткий логин","POPUPS_DOMAIN/LABEL_USE_AUTH":"Использовать аутентификацию","POPUPS_DOMAIN/LABEL_USE_PHP_MAIL":"Использовать mail() функцию","POPUPS_DOMAIN/BUTTON_TEST":"Тест","POPUPS_DOMAIN/BUTTON_WHITE_LIST":"Белый список","POPUPS_DOMAIN/BUTTON_SIEVE_CONFIGURATION":"настройки Sieve","POPUPS_DOMAIN/BUTTON_BACK_TO_IMAP":"Назад к IMAP настройкам","POPUPS_DOMAIN/BUTTON_BACK":"Назад","POPUPS_DOMAIN/BUTTON_CLOSE":"Закрыть","POPUPS_DOMAIN/BUTTON_ADD":"Добавить","POPUPS_DOMAIN/BUTTON_UPDATE":"Обновить","POPUPS_DOMAIN/NEW_DOMAIN_DESC":"Эта конфигурация позволит вам работать <br />с <i>%NAME%</i> адресами.","POPUPS_DOMAIN/WHITE_LIST_ALERT":"Список пользователей домена к которым разрешен доступ.\nИспользуйте пробел в качестве разделителя.","POPUPS_PLUGIN/TITLE_PLUGIN":"Плагин","POPUPS_PLUGIN/DESC_NOTHING_TO_CONFIGURE":"Без настроек","POPUPS_PLUGIN/BUTTON_CLOSE":"Закрыть","POPUPS_PLUGIN/BUTTON_SAVE":"Сохранить","POPUPS_PLUGIN/TOOLTIP_ABOUT_TITLE":"О плагине","POPUPS_ASK/DESC_WANT_CLOSE_THIS_WINDOW":"Вы уверены, что хотите закрыть это окно?","POPUPS_LANGUAGES/TITLE_LANGUAGES":"Выберите язык","HINTS/BETA":"beta","HINTS/UNSTABLE":"unstable","HINTS/WARNING":"Внимание!","HINTS/NOT_SUPPORTED":"не поддерживается","HINTS/REQUIRES_PHP_54":"требует PHP 5.4 или выше","ERRORS/DOMAIN_ALREADY_EXISTS":"Домен уже существует","ERRORS/UNKNOWN_ERROR":"Неизвестная ошибка","NOTIFICATIONS/INVALID_TOKEN":"Неверный токен запроса","NOTIFICATIONS/AUTH_ERROR":"Не удалось авторизоваться","NOTIFICATIONS/ACCESS_ERROR":"Ошибка доступа","NOTIFICATIONS/CONNECTION_ERROR":"Ошибка соединения с сервером.","NOTIFICATIONS/CAPTCHA_ERROR":"Неправильное проверочное слово.","NOTIFICATIONS/SOCIAL_FACEBOOK_LOGIN_ACCESS_DISABLE":"К данному социальному пользователю еще не прикреплен почтовый аккаунт. Войдите в систему под своим почтовым аккаунтом и включите эту возможность в настройках.","NOTIFICATIONS/SOCIAL_TWITTER_LOGIN_ACCESS_DISABLE":"К данному социальному пользователю еще не прикреплен почтовый аккаунт. Войдите в систему под своим почтовым аккаунтом и включите эту возможность в настройках.","NOTIFICATIONS/SOCIAL_GOOGLE_LOGIN_ACCESS_DISABLE":"К данному социальному пользователю еще не прикреплен почтовый аккаунт. Войдите в систему под своим почтовым аккаунтом и включите эту возможность в настройках.","NOTIFICATIONS/DOMAIN_NOT_ALLOWED":"Данный домен не разрешен","NOTIFICATIONS/ACCOUNT_NOT_ALLOWED":"Данный аккаунт не разрешен","NOTIFICATIONS/ACCOUNT_TWO_FACTOR_AUTH_REQUIRED":"Необходима двухфакторная верификация","NOTIFICATIONS/ACCOUNT_TWO_FACTOR_AUTH_ERROR":"Ошибка двухфакторной верификации","NOTIFICATIONS/COULD_NOT_SAVE_NEW_PASSWORD":"Не удалось сохранить новый пароль","NOTIFICATIONS/CURRENT_PASSWORD_INCORRECT":"Текущий пароль неверный","NOTIFICATIONS/NEW_PASSWORD_SHORT":"Пароль слишком короткий","NOTIFICATIONS/NEW_PASSWORD_WEAK":"Пароль слишком простой","NOTIFICATIONS/NEW_PASSWORD_FORBIDDENT":"Пароль содержит запрещенные символы","NOTIFICATIONS/CONTACTS_SYNC_ERROR":"Ошибка синхронизации контактов","NOTIFICATIONS/CANT_GET_MESSAGE_LIST":"Не могу получить список писем","NOTIFICATIONS/CANT_GET_MESSAGE":"Не могу получить письмо","NOTIFICATIONS/CANT_DELETE_MESSAGE":"Не могу удалить письмо","NOTIFICATIONS/CANT_MOVE_MESSAGE":"Не могу переместить письмо","NOTIFICATIONS/CANT_SAVE_MESSAGE":"Не могу сохранить письмо","NOTIFICATIONS/CANT_SEND_MESSAGE":"Не могу отправить письмо","NOTIFICATIONS/INVALID_RECIPIENTS":"Проверьте правильность ввода всех адресов.","NOTIFICATIONS/CANT_SAVE_FILTERS":"Не могу сохранить фильтры","NOTIFICATIONS/CANT_GET_FILTERS":"Не могу загрузить фильтры","NOTIFICATIONS/FILTERS_ARE_NOT_CORRECT":"Фильтры неправильны","NOTIFICATIONS/CANT_CREATE_FOLDER":"Не могу создать папку","NOTIFICATIONS/CANT_RENAME_FOLDER":"Не могу переименовать папку","NOTIFICATIONS/CANT_DELETE_FOLDER":"Не могу удалить папку","NOTIFICATIONS/CANT_DELETE_NON_EMPTY_FOLDER":"Не могу удалить непустую папку","NOTIFICATIONS/CANT_SUBSCRIBE_FOLDER":"Не могу подписать папку","NOTIFICATIONS/CANT_UNSUBSCRIBE_FOLDER":"Не могу отписать папку","NOTIFICATIONS/CANT_SAVE_SETTINGS":"Не могу сохранить настройки","NOTIFICATIONS/CANT_SAVE_PLUGIN_SETTINGS":"Не могу сохранить настройки","NOTIFICATIONS/DOMAIN_ALREADY_EXISTS":"Домен уже существует","NOTIFICATIONS/CANT_INSTALL_PACKAGE":"Ошибка установки пакета","NOTIFICATIONS/CANT_DELETE_PACKAGE":"Ошибка удаления пакета","NOTIFICATIONS/INVALID_PLUGIN_PACKAGE":"Ошибка пакета плагина","NOTIFICATIONS/UNSUPPORTED_PLUGIN_PACKAGE":"Для работы плагина необходима полная поддержка сервера","NOTIFICATIONS/LICENSING_SERVER_IS_UNAVAILABLE":"Сервер подписок временно не доступен.","NOTIFICATIONS/LICENSING_DOMAIN_EXPIRED":"Подписка на данный домен устарела.","NOTIFICATIONS/LICENSING_DOMAIN_BANNED":"Подписка на данный домен заблокирована.","NOTIFICATIONS/DEMO_SEND_MESSAGE_ERROR":"Демо аккаунту отправка писем  на внешние почтовые адреса запрещена!","NOTIFICATIONS/DEMO_ACCOUNT_ERROR":"По соображениям безопасности данный аккаунт не может выполнить это действие.","NOTIFICATIONS/ACCOUNT_ALREADY_EXISTS":"Аккаунт уже добавлен","NOTIFICATIONS/ACCOUNT_DOES_NOT_EXIST":"Аккаунт не существует","NOTIFICATIONS/MAIL_SERVER_ERROR":"Ошибка доступа к почтовому серверу","NOTIFICATIONS/INVALID_INPUT_ARGUMENT":"Неверный параметр","NOTIFICATIONS/UNKNOWN_ERROR":"Неизвестная ошибка","STATIC/BACK_LINK":"Обновить","STATIC/DOMAIN_LIST_DESC":"Список доменов, к которым разрешен доступ через веб почту.","STATIC/PHP_EXSTENSIONS_ERROR_DESC":"Необходимые расширения PHP не установлены на вашем сервере!","STATIC/PHP_VERSION_ERROR_DESC":"Ваша версия PHP (%VERSION%) ниже требуемой 5.3.0!","STATIC/NO_SCRIPT_TITLE":"Для работы приложения необходим JavaScript.","STATIC/NO_SCRIPT_DESC":"По-видимому, JavaScript либо не поддерживается вашим браузером, либо отключен.\nВключите JavaScript, изменив настройки браузера, затем повторите попытку.","STATIC/NO_COOKIE_TITLE":"Для работы приложения необходимы Cookie.","STATIC/NO_COOKIE_DESC":"По-видимому, Cookie либо не поддерживаются вашим браузером, либо отключены.\nВключите Cookie, изменив настройки браузера, затем повторите попытку.","STATIC/BAD_BROWSER_TITLE":"Ваш браузер устарел.","STATIC/BAD_BROWSER_DESC":"Чтобы использовать все возможности приложения,\nзагрузите и установите один из этих браузеров"};
+;(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined'
+       && typeof require === 'function' ? factory(require('../moment')) :
+   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
+   factory(global.moment)
+}(this, (function (moment) { 'use strict';
+
+
+    function plural(word, num) {
+        var forms = word.split('_');
+        return num % 10 === 1 && num % 100 !== 11 ? forms[0] : (num % 10 >= 2 && num % 10 <= 4 && (num % 100 < 10 || num % 100 >= 20) ? forms[1] : forms[2]);
+    }
+    function relativeTimeWithPlural(number, withoutSuffix, key) {
+        var format = {
+            'ss': withoutSuffix ? 'секунда_секунды_секунд' : 'секунду_секунды_секунд',
+            'mm': withoutSuffix ? 'минута_минуты_минут' : 'минуту_минуты_минут',
+            'hh': 'час_часа_часов',
+            'dd': 'день_дня_дней',
+            'MM': 'месяц_месяца_месяцев',
+            'yy': 'год_года_лет'
+        };
+        if (key === 'm') {
+            return withoutSuffix ? 'минута' : 'минуту';
+        }
+        else {
+            return number + ' ' + plural(format[key], +number);
+        }
+    }
+    var monthsParse = [/^янв/i, /^фев/i, /^мар/i, /^апр/i, /^ма[йя]/i, /^июн/i, /^июл/i, /^авг/i, /^сен/i, /^окт/i, /^ноя/i, /^дек/i];
+
+                var ru = moment.defineLocale('ru', {
+        months : {
+            format: 'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split('_'),
+            standalone: 'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь'.split('_')
+        },
+        monthsShort : {
+                        format: 'янв._февр._мар._апр._мая_июня_июля_авг._сент._окт._нояб._дек.'.split('_'),
+            standalone: 'янв._февр._март_апр._май_июнь_июль_авг._сент._окт._нояб._дек.'.split('_')
+        },
+        weekdays : {
+            standalone: 'воскресенье_понедельник_вторник_среда_четверг_пятница_суббота'.split('_'),
+            format: 'воскресенье_понедельник_вторник_среду_четверг_пятницу_субботу'.split('_'),
+            isFormat: /\[ ?[Вв] ?(?:прошлую|следующую|эту)? ?\] ?dddd/
+        },
+        weekdaysShort : 'вс_пн_вт_ср_чт_пт_сб'.split('_'),
+        weekdaysMin : 'вс_пн_вт_ср_чт_пт_сб'.split('_'),
+        monthsParse : monthsParse,
+        longMonthsParse : monthsParse,
+        shortMonthsParse : monthsParse,
+
+                monthsRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
+
+                monthsShortRegex: /^(январ[ья]|янв\.?|феврал[ья]|февр?\.?|марта?|мар\.?|апрел[ья]|апр\.?|ма[йя]|июн[ья]|июн\.?|июл[ья]|июл\.?|августа?|авг\.?|сентябр[ья]|сент?\.?|октябр[ья]|окт\.?|ноябр[ья]|нояб?\.?|декабр[ья]|дек\.?)/i,
+
+                monthsStrictRegex: /^(январ[яь]|феврал[яь]|марта?|апрел[яь]|ма[яй]|июн[яь]|июл[яь]|августа?|сентябр[яь]|октябр[яь]|ноябр[яь]|декабр[яь])/i,
+
+                monthsShortStrictRegex: /^(янв\.|февр?\.|мар[т.]|апр\.|ма[яй]|июн[ья.]|июл[ья.]|авг\.|сент?\.|окт\.|нояб?\.|дек\.)/i,
+        longDateFormat : {
+            LT : 'H:mm',
+            LTS : 'H:mm:ss',
+            L : 'DD.MM.YYYY',
+            LL : 'D MMMM YYYY г.',
+            LLL : 'D MMMM YYYY г., H:mm',
+            LLLL : 'dddd, D MMMM YYYY г., H:mm'
+        },
+        calendar : {
+            sameDay: '[Сегодня, в] LT',
+            nextDay: '[Завтра, в] LT',
+            lastDay: '[Вчера, в] LT',
+            nextWeek: function (now) {
+                if (now.week() !== this.week()) {
+                    switch (this.day()) {
+                        case 0:
+                            return '[В следующее] dddd, [в] LT';
+                        case 1:
+                        case 2:
+                        case 4:
+                            return '[В следующий] dddd, [в] LT';
+                        case 3:
+                        case 5:
+                        case 6:
+                            return '[В следующую] dddd, [в] LT';
+                    }
+                } else {
+                    if (this.day() === 2) {
+                        return '[Во] dddd, [в] LT';
+                    } else {
+                        return '[В] dddd, [в] LT';
+                    }
+                }
+            },
+            lastWeek: function (now) {
+                if (now.week() !== this.week()) {
+                    switch (this.day()) {
+                        case 0:
+                            return '[В прошлое] dddd, [в] LT';
+                        case 1:
+                        case 2:
+                        case 4:
+                            return '[В прошлый] dddd, [в] LT';
+                        case 3:
+                        case 5:
+                        case 6:
+                            return '[В прошлую] dddd, [в] LT';
+                    }
+                } else {
+                    if (this.day() === 2) {
+                        return '[Во] dddd, [в] LT';
+                    } else {
+                        return '[В] dddd, [в] LT';
+                    }
+                }
+            },
+            sameElse: 'L'
+        },
+        relativeTime : {
+            future : 'через %s',
+            past : '%s назад',
+            s : 'несколько секунд',
+            ss : relativeTimeWithPlural,
+            m : relativeTimeWithPlural,
+            mm : relativeTimeWithPlural,
+            h : 'час',
+            hh : relativeTimeWithPlural,
+            d : 'день',
+            dd : relativeTimeWithPlural,
+            M : 'месяц',
+            MM : relativeTimeWithPlural,
+            y : 'год',
+            yy : relativeTimeWithPlural
+        },
+        meridiemParse: /ночи|утра|дня|вечера/i,
+        isPM : function (input) {
+            return /^(дня|вечера)$/.test(input);
+        },
+        meridiem : function (hour, minute, isLower) {
+            if (hour < 4) {
+                return 'ночи';
+            } else if (hour < 12) {
+                return 'утра';
+            } else if (hour < 17) {
+                return 'дня';
+            } else {
+                return 'вечера';
+            }
+        },
+        dayOfMonthOrdinalParse: /\d{1,2}-(й|го|я)/,
+        ordinal: function (number, period) {
+            switch (period) {
+                case 'M':
+                case 'd':
+                case 'DDD':
+                    return number + '-й';
+                case 'D':
+                    return number + '-го';
+                case 'w':
+                case 'W':
+                    return number + '-я';
+                default:
+                    return number;
+            }
+        },
+        week : {
+            dow : 1,             doy : 4          }
+    });
+
+    return ru;
+
+})));

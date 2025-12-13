@@ -1,0 +1,88 @@
+version: "3.8"
+services:
+  haproxy:
+    image: haproxy:2.9
+    ports:
+      - "25:25"
+      - "143:143"
+      - "587:587"
+      - "8080:80"
+      - "8404:8404"
+    volumes:
+      - ./haproxy/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
+    networks:
+      - mailnet
+    deploy:
+      replicas: 1
+      placement:
+        constraints:
+          - node.role == manager
+      restart_policy:
+        condition: any
+
+  mailserver:
+    image: docker.io/mailserver/docker-mailserver:latest
+    environment:
+      TZ: Europe/Moscow
+
+      # КРИТИЧНО для Swarm:
+      OVERRIDE_HOSTNAME: mail.example.local
+
+      ENABLE_SPAMASSASSIN: "0"
+      ENABLE_CLAMAV: "0"
+      ENABLE_FAIL2BAN: "0"
+      ENABLE_POSTGREY: "0"
+
+      SSL_TYPE: ""
+      ACCOUNT_PROVISIONER: "FILE"
+    volumes:
+      - maildata_shared:/var/mail
+      - /var/mail-state
+      - /var/log/mail
+      - ./mailserver/config:/tmp/docker-mailserver
+    cap_add:
+      - NET_ADMIN
+      - SYS_PTRACE
+    networks:
+      - mailnet
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: any
+
+  rainloop:
+    image: hardware/rainloop:latest
+    volumes:
+      - ./rainloop/data:/rainloop/data
+    networks:
+      - mailnet
+    deploy:
+      replicas: 2
+      restart_policy:
+        condition: any
+
+  rainloop-db:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: rainloop
+      MARIADB_USER: rainloop
+      MARIADB_PASSWORD: rainlooppass
+      MARIADB_ROOT_PASSWORD: rootpass
+    volumes:
+      - rainloop_db:/var/lib/mysql
+    networks:
+      - mailnet
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: any
+
+networks:
+  mailnet:
+    driver: overlay
+    attachable: true
+
+volumes:
+  maildata_shared:
+    external: true
+  rainloop_db:
