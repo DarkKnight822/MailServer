@@ -128,3 +128,10 @@ jobs:
             COMPOSE_FILE="docker-compose.yml"
           fi
           docker compose -f "$COMPOSE_FILE" down -v
+      - name: Success message
+        if: success()
+        run: |
+          echo "✅ CI OK: compose поднялся, HAProxy отвечает, smoke-тесты прошли."
+          echo "Commit: ${{ github.sha }}"
+          echo "Actor:  ${{ github.actor }}"
+          echo "Message: ${{ github.event.head_commit.message }}"
