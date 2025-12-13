@@ -1,137 +1,45 @@
-name: CI - Docker Compose stack
-
+name: CI
 on:
   push:
     branches: [ "main", "master" ]
   pull_request:
     branches: [ "main", "master" ]
-  workflow_dispatch:
-
 jobs:
-  compose-ci:
+  compose:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        # Забираем файлы репозитория на runner
+        
+      - name: Validate docker-compose
+        run: docker compose config > /dev/null
+        # Проверяем, что docker-compose.yml валиден
 
-      # На ubuntu-latest Docker уже установлен, но Buildx лучше поднять явно
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Show Docker versions
+      - name: Up stack
         run: |
-          docker --version
-          docker compose version
-
-      # Проверь какой файл у тебя основной. Ниже я проверяю оба варианта, если они есть.
-      - name: Validate compose files (if present)
-        shell: bash
-        run: |
-          set -e
-          if [ -f docker-compose.yml ]; then
-            echo "Validating docker-compose.yml"
-            docker compose -f docker-compose.yml config > /dev/null
-          fi
-          if [ -f docker-compose.yaml ]; then
-            echo "Validating docker-compose.yaml"
-            docker compose -f docker-compose.yaml config > /dev/null
-          fi
-          if [ -f docker-compose.replicas.yml ]; then
-            echo "Validating docker-compose.replicas.yml"
-            docker compose -f docker-compose.replicas.yml config > /dev/null
-          fi
-          if [ -f docker-compose.swarm.yml ]; then
-            echo "Found docker-compose.swarm.yml (Swarm). CI will not deploy swarm stack here."
-          fi
-
-      # Выбери один compose файл, который реально должен стартовать в CI.
-      # Я использую docker-compose.yaml, если его нет — docker-compose.yml.
-      - name: Start stack (compose)
-        shell: bash
-        run: |
-          set -e
-          COMPOSE_FILE="docker-compose.yaml"
-          if [ ! -f "$COMPOSE_FILE" ]; then
-            COMPOSE_FILE="docker-compose.yml"
-          fi
-          echo "Using compose file: $COMPOSE_FILE"
-
-          # Иногда проекты используют external volume. В CI его нет — создаём, если нужно.
-          # Если у тебя в compose есть maildata_shared external:true, это спасёт пайплайн.
           docker volume create maildata_shared >/dev/null 2>&1 || true
+          docker compose up -d
+        # Создаём внешний volume и поднимаем контейнеры
 
-          # Поднять (без масштабирования). Если у тебя нужно 2 реплики — можно добавить --scale.
-          docker compose -f "$COMPOSE_FILE" up -d
-
-      - name: Show containers
+      - name: Check containers are running
         run: |
-          docker ps -a
+          docker compose ps
+          test "$(docker compose ps -q | wc -l)" -ge 1
+        # Смотрим список контейнеров и проверяем, что хоть один запущен
 
-      # Подождём пока haproxy начнет отвечать. На твоём проекте stats висит на 8404.
-      - name: Wait for HAProxy stats to become available
-        shell: bash
+      - name: Check Rainloop and HAProxy stats
         run: |
-          set -e
-          for i in {1..60}; do
-            if curl -fsS http://localhost:8404/ >/dev/null 2>&1; then
-              echo "HAProxy stats is up"
-              exit 0
-            fi
-            sleep 2
-          done
-          echo "HAProxy did not become ready in time"
-          docker logs haproxy || true
-          exit 1
+          curl -fsS http://localhost:8080/ > /dev/null
+          curl -fsS http://localhost:8404/ > /dev/null
+        # Сайт Rainloop и HAProxy отвечают по HTTP
 
-      # Smoke tests по портам (что слушается)
-      - name: Smoke test ports
-        shell: bash
-        run: |
-          set -e
-          # HTTP Rainloop through HAProxy
-          curl -fsS http://localhost:8080/ >/dev/null
-
-          # Проверка, что порты открыты (без установки telnet)
-          timeout 2 bash -c "</dev/tcp/127.0.0.1/25"  || true
-          timeout 2 bash -c "</dev/tcp/127.0.0.1/143" || true
-          timeout 2 bash -c "</dev/tcp/127.0.0.1/587" || true
-
-          echo "Smoke tests passed"
-
-      # На случай фейла — вывести логи ключевых сервисов
-      - name: Logs on failure
-        if: failure()
-        run: |
-          echo "=== haproxy logs ==="
-          docker logs --tail 200 haproxy || true
-          echo "=== mailserver logs ==="
-          docker logs --tail 200 mailserver1 || true
-          docker logs --tail 200 mailserver2 || true
-          docker logs --tail 200 project-mailserver-1 || true
-          docker logs --tail 200 project-mailserver-2 || true
-          echo "=== rainloop logs ==="
-          docker logs --tail 200 rainloop || true
-          docker logs --tail 200 project-rainloop-1 || true
-          docker logs --tail 200 project-rainloop-2 || true
-          echo "=== db logs ==="
-          docker logs --tail 200 rainloop-db || true
-
-      - name: Shutdown stack
-        if: always()
-        shell: bash
-        run: |
-          set +e
-          COMPOSE_FILE="docker-compose.yaml"
-          if [ ! -f "$COMPOSE_FILE" ]; then
-            COMPOSE_FILE="docker-compose.yml"
-          fi
-          docker compose -f "$COMPOSE_FILE" down -v
-      - name: Success message
+      - name: Success output
         if: success()
         run: |
-          echo "✅ CI OK: compose поднялся, HAProxy отвечает, smoke-тесты прошли."
+          echo "CI OK: compose валиден, контейнеры поднялись, Rainloop/HAProxy доступны."
           echo "Commit: ${{ github.sha }}"
           echo "Actor:  ${{ github.actor }}"
-          echo "Message: ${{ github.event.head_commit.message }}"
+      - name: Down stack
+        if: always()
+        run: docker compose down -v
+        # Всегда останавливаем и удаляем контейнеры/сеть (чистим окружение CI)
