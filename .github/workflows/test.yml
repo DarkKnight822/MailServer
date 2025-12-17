@@ -31,8 +31,32 @@ jobs:
 
       - name: Check HTTP endpoints
         run: |
-          curl -fsS http://localhost:8080/ > /dev/null
-          curl -fsS http://localhost:8404/ > /dev/null
+          echo "Waiting for Rainloop on :8080..."
+          for i in {1..30}; do
+            if curl -fsS --max-time 5 http://localhost:8080/ > /dev/null 2>&1; then
+              echo "Rainloop OK"
+              break
+            fi
+            echo "Rainloop not ready yet ($i/30)"
+            sleep 5
+          done
+
+          echo "Waiting for HAProxy stats on :8404..."
+          for i in {1..30}; do
+            if curl -fsS --max-time 5 http://localhost:8404/ > /dev/null 2>&1; then
+              echo "HAProxy stats OK"
+              break
+            fi
+            echo "HAProxy stats not ready yet ($i/30)"
+            sleep 5
+          done
+          
+      - name: Show haproxy logs on failure
+        if: failure()
+        run: |
+          docker service ls
+          docker service ps mail_haproxy
+          docker service logs --tail 100 mail_haproxy || true
 
       - name: Check mail service replicas
         run: |
