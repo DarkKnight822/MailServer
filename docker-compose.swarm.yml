@@ -23,16 +23,11 @@ services:
   mailserver:
     image: docker.io/mailserver/docker-mailserver:latest
     environment:
-      TZ: Europe/Moscow
-
-      # КРИТИЧНО для Swarm:
       OVERRIDE_HOSTNAME: mail.example.local
-
       ENABLE_SPAMASSASSIN: "0"
       ENABLE_CLAMAV: "0"
       ENABLE_FAIL2BAN: "0"
       ENABLE_POSTGREY: "0"
-
       SSL_TYPE: ""
       ACCOUNT_PROVISIONER: "FILE"
     volumes:
