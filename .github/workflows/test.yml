@@ -1,45 +1,54 @@
-name: CI
+name: Swarm CI
+
 on:
   push:
     branches: [ "main", "master" ]
   pull_request:
     branches: [ "main", "master" ]
+
 jobs:
-  compose:
+  swarm:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        # Забираем файлы репозитория на runner
-        
-      - name: Validate docker-compose
-        run: docker compose config > /dev/null
-        # Проверяем, что docker-compose.yml валиден
 
-      - name: Up stack
+      - name: Init Swarm
+        run: docker swarm init
+
+      - name: Create shared volume
+        run: docker volume create maildata_shared || true
+
+      - name: Validate swarm compose
+        run: docker compose -f docker-compose.swarm.yml config > /dev/null
+
+      - name: Deploy stack
+        run: docker stack deploy -c docker-compose.swarm.yml mail
+
+      - name: Wait for services
         run: |
-          docker volume create maildata_shared >/dev/null 2>&1 || true
-          docker compose up -d
-        # Создаём внешний volume и поднимаем контейнеры
+          sleep 30
+          docker service ls
 
-      - name: Check containers are running
-        run: |
-          docker compose ps
-          test "$(docker compose ps -q | wc -l)" -ge 1
-        # Смотрим список контейнеров и проверяем, что хоть один запущен
-
-      - name: Check Rainloop and HAProxy stats
+      - name: Check HTTP endpoints
         run: |
           curl -fsS http://localhost:8080/ > /dev/null
           curl -fsS http://localhost:8404/ > /dev/null
-        # Сайт Rainloop и HAProxy отвечают по HTTP
+
+      - name: Check mail service replicas
+        run: |
+          docker service ps mail_mailserver
+          REPLICAS=$(docker service ls --format '{{.Name}} {{.Replicas}}' | awk '$1=="mail_mailserver"{print $2}')
+          echo "mail_mailserver replicas: $REPLICAS"
 
       - name: Success output
         if: success()
         run: |
-          echo "CI OK: compose валиден, контейнеры поднялись, Rainloop/HAProxy доступны."
+          echo "Swarm CI OK: stack deployed, endpoints available."
           echo "Commit: ${{ github.sha }}"
           echo "Actor:  ${{ github.actor }}"
-      - name: Down stack
+
+      - name: Cleanup
         if: always()
-        run: docker compose down -v
-        # Всегда останавливаем и удаляем контейнеры/сеть (чистим окружение CI)
+        run: |
+          docker stack rm mail
+          docker swarm leave --force
