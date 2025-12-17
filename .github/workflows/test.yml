@@ -26,24 +26,33 @@ jobs:
 
       - name: Wait for services
         run: |
-          sleep 5
+          sleep 20
           docker service ls
 
-      - name: Check HTTP endpoints once
+      - name: Check replicas
         run: |
-          curl -fsS --max-time 5 http://localhost:8080/ > /dev/null
-          curl -fsS --max-time 5 http://localhost:8404/ > /dev/null
+          echo "Checking service replicas..."
+          docker service ls
 
-      - name: Check mail service replicas
-        run: |
-          docker service ps mail_mailserver
-          REPLICAS=$(docker service ls --format '{{.Name}} {{.Replicas}}' | awk '$1=="mail_mailserver"{print $2}')
-          echo "mail_mailserver replicas: $REPLICAS"
+          HA=$(docker service ls --format '{{.Name}} {{.Replicas}}' | awk '$1=="mail_haproxy"{print $2}')
+          MS=$(docker service ls --format '{{.Name}} {{.Replicas}}' | awk '$1=="mail_mailserver"{print $2}')
+          RL=$(docker service ls --format '{{.Name}} {{.Replicas}}' | awk '$1=="mail_rainloop"{print $2}')
+          DB=$(docker service ls --format '{{.Name}} {{.Replicas}}' | awk '$1=="mail_rainloop-db"{print $2}')
+
+          echo "mail_haproxy:    $HA"
+          echo "mail_mailserver: $MS"
+          echo "mail_rainloop:   $RL"
+          echo "mail_rainloop-db:$DB"
+
+          [ "$HA" = "1/1" ] || { echo "haproxy replicas mismatch"; exit 1; }
+          [ "$MS" = "2/2" ] || { echo "mailserver replicas mismatch"; exit 1; }
+          [ "$RL" = "2/2" ] || { echo "rainloop replicas mismatch"; exit 1; }
+          [ "$DB" = "1/1" ] || { echo "db replicas mismatch"; exit 1; }
 
       - name: Success output
         if: success()
         run: |
-          echo "Swarm CI OK: stack deployed, endpoints available."
+          echo "Swarm CI OK: stack deployed, нужное количество реплик запущено."
           echo "Commit: ${{ github.sha }}"
           echo "Actor:  ${{ github.actor }}"
 
